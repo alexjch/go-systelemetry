@@ -1,0 +1,9 @@
+[Unit]
+Requires=systelem.socket
+
+[Service]
+ExecStart=/usr/bin/systelem
+NonBlocking=true
+StandardError=journal
+StandardOutput=journal
+StandardInput=null

@@ -1,0 +1,9 @@
+[Unit]
+Description=Starts systelem
+
+[Socket]
+ListenStream=/var/run/systelem.sock
+NoDelay=true
+
+[Install]
+WantedBy=sockets.target
