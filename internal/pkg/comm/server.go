@@ -1,4 +1,4 @@
-package server
+package comm
 
 import (
 	"fmt"
@@ -8,16 +8,15 @@ import (
 )
 
 const (
+	/* Systemd socket activation file descriptor */
 	LISTEN_FDS_START uintptr = 3
-	/* Make this a parameter */
-	DEFAULT_SOCKET string = "/var/run/systelem.sock"
 )
 
-type SysTelem struct {
+type SysTelemetry struct {
 	net.Listener
 }
 
-func NewSysTelem(s string) (*SysTelem, error) {
+func NewSysTelemetry(s string) (*SysTelemetry, error) {
 	var l net.Listener
 	var err error
 
@@ -37,5 +36,5 @@ func NewSysTelem(s string) (*SysTelem, error) {
 			return nil, err
 		}
 	}
-	return &SysTelem{Listener: l}, nil
+	return &SysTelemetry{Listener: l}, nil
 }
