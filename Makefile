@@ -11,3 +11,6 @@ install:
 clean:
 	rm -f systelem systelem_edac
 	go clean -i ./...
+
+test:
+	go test ./...
