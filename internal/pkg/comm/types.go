@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: MIT
 package comm
 
 import "github.com/alexjch/go-dmesg/pkg/dmesg"
